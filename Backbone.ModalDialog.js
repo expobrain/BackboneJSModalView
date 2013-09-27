@@ -39,6 +39,12 @@ Backbone.ModalView =
                 "-webkit-border-radius": "10px",
                 "-moz-border-radius": "10px",
                 "border-radius": "10px"
+            },
+            containerCss:
+            {
+                "-webkit-border-radius": "6px",
+                "-moz-border-radius": "6px",
+                "border-radius": "6px"
             }
 		},
 
@@ -79,13 +85,7 @@ Backbone.ModalView =
                 {
                     this.modalContainer =
                         $("<div id='modalContainer'>")
-                            .css({
-                                "z-index":"99999",
-                                "position":"relative",
-                                "-webkit-border-radius": "6px",
-                                "-moz-border-radius": "6px",
-                                "border-radius": "6px"
-                                })
+                            .css(this.defaultOptions.containerCss)
                             .appendTo( target);
                 }
 
